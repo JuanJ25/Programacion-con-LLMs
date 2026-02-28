@@ -10,7 +10,7 @@ Este repositorio contiene la Fase 1 del proyecto de programacion con LLMs establ
 
 ## 📁 Estructura del Repositorio
 ---
-El proyecto se organiza siguiendo la siguiente estructura:
+El proyecto mantiene una organización modular para separar claramente los enunciados de las preguntas, los scripts de generación y las soluciones finales:
 
 ```text
 .
