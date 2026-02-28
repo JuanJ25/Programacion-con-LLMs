@@ -10,19 +10,22 @@ Este repositorio contiene la Fase 1 del proyecto de programacion con LLMs establ
 
 ## 📁 Estructura del Repositorio
 ---
+El proyecto se organiza siguiendo una jerarquía estricta para separar la lógica de las preguntas de las futuras respuestas:
 
-├── myquestions/             
+```text
+.
+├── myquestions/
 │   ├── question-0001.txt
 │   ├── question-0001-usecase-generator.py
 │   ├── question-0002.txt
 │   ├── question-0002-usecase-generator.py
-│   ├──question-0003.txt
+│   ├── question-0003.txt
 │   ├── question-0003-usecase-generator.py
 │   ├── question-0004.txt
 │   └── question-0004-usecase-generator.py
-├── myanswers/              
+├── myanswers/
 │   ├── answer-0123.py
 │   ├── answer-0087.py
 │   ├── answer-0012.py
 │   └── answer-0289.py
-└── README.md            
+└── README.md
