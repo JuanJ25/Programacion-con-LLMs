@@ -1,0 +1,22 @@
+Procesamiento de Texto para Soporte Técnico
+Se requiere transformar mensajes de tickets de soporte técnico en una representación numérica densa para su posterior clasificación automática.
+El Problema Se dispone de un pandas.DataFrame llamado df que contiene una columna con texto sin procesar.
+Tu Misión Escribe una función llamada: preparar_texto_soporte(df, col_texto, max_palabras)
+Parámetros
+•	df: pandas.DataFrame.
+•	col_texto: string que indica el nombre de la columna con el texto.
+•	max_palabras: entero positivo que limita el tamaño del vocabulario.
+La función debe realizar exactamente lo siguiente:
+1.	Convertir todo el texto de la columna col_texto a minúsculas usando el método .str.lower() de pandas.
+2.	Instanciar un CountVectorizer de sklearn.feature_extraction.text configurando:
+o	max_features = max_palabras
+o	Todos los demás parámetros por defecto (incluyendo stop_words).
+3.	Ajustar y transformar el texto de la columna procesada.
+4.	Convertir la matriz dispersa resultante a una matriz densa utilizando el método .toarray().
+5.	Devolver la matriz densa como numpy.ndarray.
+Restricciones
+•	No eliminar stop_words de forma manual o mediante parámetros adicionales.
+•	No modificar el DataFrame original (trabajar sobre una copia o la serie extraída).
+•	No usar TfidfVectorizer.
+Retorno
+•	Un numpy.ndarray (matriz densa) de frecuencias de palabras.

@@ -1,0 +1,20 @@
+Análisis de Eficiencia Logística
+
+Una empresa de mensajería analiza la eficiencia de sus rutas comparando el tiempo estimado y el tiempo real de entrega para identificar retrasos críticos.
+El problema: Se dispone de un pandas.DataFrame llamado df que contiene exactamente las siguientes columnas numéricas:
+•	tiempo_estimado
+•	tiempo_real
+No existen valores faltantes (NaN) en estas columnas. Una ruta se considera crítica si su retraso es estrictamente mayor al percentil indicado calculado sobre todos los retrasos del conjunto de datos.
+Tu Misión Escribe una función llamada: identificar_rutas_criticas(df, percentil)
+Parámetros
+•	df: pandas.DataFrame que contiene las columnas tiempo_estimado y tiempo_real.
+•	percentil: número (int o float) entre 0 y 100.
+La función debe realizar exactamente lo siguiente:
+1.	Crear una nueva columna llamada retraso definida como: retraso = tiempo_real - tiempo_estimado.
+2.	Calcular el valor del umbral del percentil indicado usando exclusivamente np.percentile(...) aplicándolo sobre la columna retraso.
+3.	Filtrar el DataFrame conservando únicamente las filas donde: retraso > umbral_percentil.
+4.	Ordenar el DataFrame resultante en orden descendente según la columna retraso.
+5.	Devolver el DataFrame resultante (incluyendo la columna retraso).
+Retorno
+•	Un pandas.DataFrame filtrado y ordenado.
+•	No modificar el DataFrame original fuera del alcance de la función.

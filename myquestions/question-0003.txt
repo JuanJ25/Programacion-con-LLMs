@@ -1,0 +1,17 @@
+Agrupamiento de Características (Reducción de Redundancia)
+
+En el mantenimiento predictivo de turbinas eólicas, se desea reducir la dimensionalidad agrupando sensores altamente correlacionados para disminuir el ruido y el costo computacional.
+El  Problema Se dispone de una matriz X de tipo numpy.ndarray bidimensional que representa las lecturas de múltiples sensores.
+Tu Misión Escribe una función llamada: comprimir_sensores_correlacionados(X, n_clusters)
+Parámetros
+•	X: numpy.ndarray bidimensional de forma (n_samples, n_features).
+•	n_clusters: entero positivo menor que el número de columnas de X.
+La función debe realizar exactamente lo siguiente:
+1.	Crear un modelo FeatureAgglomeration de sklearn.cluster con:
+o	n_clusters = n_clusters
+o	Todos los demás parámetros por defecto.
+2.	Ajustar el modelo a la matriz X.
+3.	Transformar la matriz original para reducir el número de características (columnas) al valor definido en n_clusters.
+4.	Devolver la matriz transformada como numpy.ndarray.
+Retorno
+•	Un numpy.ndarray con forma (n_samples, n_clusters).

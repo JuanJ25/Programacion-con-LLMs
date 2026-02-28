@@ -1,0 +1,19 @@
+Detección de Anomalías Multivariadas
+
+En ciberseguridad bancaria, se desea detectar transacciones fraudulentas utilizando un modelo no supervisado que identifique combinaciones inusuales de variables.
+El  Problema Se dispone de una matriz X de tipo numpy.ndarray bidimensional con forma (n_samples, n_features).
+Tu Misión Escribe una función llamada: detectar_fraude_multivariado(X, contaminacion)
+Parámetros
+•	X: numpy.ndarray bidimensional.
+•	contaminacion: float entre 0 y 0.5 que representa la proporción esperada de anomalías.
+La función debe realizar exactamente lo siguiente:
+1.	Crear un modelo IsolationForest de sklearn.ensemble con los siguientes parámetros:
+o	contamination = contaminacion
+o	random_state = 42
+o	Todos los demás parámetros por defecto.
+2.	Ajustar el modelo con la matriz X usando .fit(X).
+3.	Obtener las predicciones del modelo.
+4.	Filtrar la matriz original para conservar únicamente las filas donde la predicción sea igual a 1 (datos considerados normales).
+5.	Devolver la matriz limpia como numpy.ndarray.
+Retorno
+•	Un numpy.ndarray que contiene únicamente los registros normales (excluyendo los detectados como outliers).
