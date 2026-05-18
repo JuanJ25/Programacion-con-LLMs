@@ -14,7 +14,7 @@ optimizar_svm_grid() missing 4 required positional arguments:
 
 La solución implementada define correctamente la función solicitada en el enunciado:
 
-Línea:
+Línea 5:
 def optimizar_svm_grid(X, y, lista_c, cv_folds):
 
 La firma de la función coincide exactamente con:
@@ -52,10 +52,10 @@ Por tanto, la implementación entregada es consistente tanto con el enunciado co
 
 El archivo del generador contiene dos funciones definidas:
 
-Línea:
+Línea 5:
 def optimizar_svm_grid(X, y, lista_c, cv_folds):
 
-Línea:
+Línea 25:
 def generar_caso_de_uso_preparar_datos_1():
 
 La segunda función:
