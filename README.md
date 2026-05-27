@@ -28,5 +28,5 @@ El proyecto mantiene una organización modular para separar claramente los enunc
 │   ├── answer-0163.py
 │   ├── answer-0198.py
 │   ├── answer-0381.py
-│   └── diagnostico.txt
+│ 
 └── README.md
